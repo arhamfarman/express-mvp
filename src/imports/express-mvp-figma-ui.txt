@@ -1,0 +1,74 @@
+Figma UI Design Prompt: "Express MVP" One-Page Site
+Overall Objective: Design a professional, high-fidelity UI mockup in Figma for a modern, dark-mode, single-page landing page for "Express MVP." The aesthetic must mimic high-end dev tools/SaaS sites (Linear, Vercel, Stripe).
+
+Visual & Technical Requirements (Figma Setup)
+Mode: Dark Mode (Background: #0A0A0B).
+
+Color Palette:
+
+Primary/Accents: Electric Indigo (#6366F1), Teal-Mint (#4ADE80).
+
+Text: Off-White (#F3F4F6) for body; Bright White (#FFFFFF) for headers.
+
+Borders/Accents: Subtle Gray (#1F2937).
+
+Typography: Modern Sans-Serif (Example: Inter, Geist, or Satoshi). Use extra bold weights for headers.
+
+Key Figma Features to Utilize: Auto Layout (for responsiveness), Components (for buttons, cards, inputs), and Variants.
+
+Layout & Sections (Single Page Flow)
+Design this as a single, vertical scrolling page.
+
+SECTION 1: Top Navigation Bar (Fixed)
+Elements: "Express MVP" logo (minimal, stylized "E" + text). Menu links: How It Works, Pricing, FAQ.
+
+Main Call to Action (CTA) Button: "Book Strategy Call" (Solid Indigo background, rounded-full shape).
+
+SECTION 2: Hero Section ("The High-Velocity Entry")
+Layout: Two-column layout (Split 60/40 or 50/50).
+
+Text (Left Side): Large, bold header: "Idea to MVP in 14 Days." Below that, subtext: "Stop over-engineering. We ship high-performance MVPs for founders who value momentum over bloated backlogs."
+
+Buttons: Primary CTA ("Launch Your Idea"), Secondary Ghost Button ("See Our Work").
+
+Visual (Right Side): The "Build Pipeline" Graphic. Figma abstract visual. Think 3D glowing "modules" (labeled "Auth," "Payment," "Database") snapping into a unified dashboard interface with motion trails.
+
+SECTION 3: Speed & Metrics ("Why We’re Faster")
+Layout: Three "Bento Box" styled cards arranged horizontally.
+
+Card Design: Use semi-transparent glassmorphism (backdrop-filter: blur(10px)) with thin 1px glowing borders.
+
+Card 1 (Metric): "14-Day Delivery." Include a minimalist glowing countdown animation.
+
+Card 2 (Price): "$1,800 Fixed." Include a "No Hidden Fees" subtitle.
+
+Card 3 (Value): "Full Scope & Tech Stack." Include a small tech stack icon grid (e.g., React, Node, Stripe).
+
+SECTION 4: How It Works ("The Sprint Process")
+Layout: Vertical or Horizontal timeline/stepper component. Use connecting lines that glow indigo to guide the eye.
+
+Step 1 (Scope): Title "01. Scope Lock." (Icon: A lock and checklist). Description: Day 1–2. Define core user path.
+
+Step 2 (Build): Title "02. The Sprint." (Icon: A rocket or lightning bolt). Description: Day 3–12. Rapid development and feedback loops.
+
+Step 3 (Launch): Title "03. Launch & Demo." (Icon: A flag on a mountain). Description: Day 13–14. Deployment, demo, and handover.
+
+SECTION 5: Pricing ("The Single Package")
+Layout: One large, centralized pricing component.
+
+Design: This card should have the most visual emphasis (maybe a slight gradient background or stronger glow).
+
+Elements: "MVP Sprint" package title. Price: "$1,800" (Large, bold text). List of inclusions (Bullet points with green checkmark icons). List details from the original details (2-3 week build, 3-5 core features, Auth, DB, etc.).
+
+SECTION 6: FAQ ("Common Questions")
+Layout: Clean list, perhaps using an accordion component variant in Figma (so questions can expand/collapse visually).
+
+Content: Include 3–4 common questions (e.g., "What if I need revisions?", "Who owns the IP?", "Do you use low-code?").
+
+SECTION 7: Final Call to Action ("Commitment Section")
+Layout: Full-width section with a subtle background gradient.
+
+Elements: Headline: "Ready to Launch Your MVP?" Subheadline: "Stop waiting. Let’s validate your idea next week." Large, prominent button (CTA): "Book Your Strategy Call."
+
+SECTION 8: Footer (Minimal)
+Elements: Copywright (© Express MVP Agency). Basic contact link. Link back to the navigation items.
