@@ -1,7 +1,4 @@
 
-  # Single-Page Website Design
-
-  This is a code bundle for Single-Page Website Design. The original project is available at https://www.figma.com/design/4lJO1bQ9sCNLAZxoEglMzS/Single-Page-Website-Design.
 
   ## Running the code
 
