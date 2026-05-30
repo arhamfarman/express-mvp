@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown, Laptop, Share2, Palette } from 'lucide-react';
+import { Menu, X, ChevronDown, Laptop, Share2, Palette, BrainCircuit, ShoppingBag, BarChart3, Repeat } from 'lucide-react';
 
 interface NavigationProps {
   currentPath: string;
@@ -75,6 +75,30 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
       path: "/services/branding-kit",
       desc: "Stunning custom logo concepts, vector guidelines, letterheads, and stamps.",
       icon: <Palette size={16} className="text-[#0D3127]" />
+    },
+    {
+      name: "AI SaaS Tool",
+      path: "/services/ai-saas-tool",
+      desc: "Custom landing page & app with OpenAI APIs, user profiles, authentication, and billing.",
+      icon: <BrainCircuit size={16} className="text-[#0D3127]" />
+    },
+    {
+      name: "Marketplace Platform",
+      path: "/services/marketplace-platform",
+      desc: "Two-sided listings platform with user profiles, reviews, messaging, and Stripe split payouts.",
+      icon: <ShoppingBag size={16} className="text-[#0D3127]" />
+    },
+    {
+      name: "Internal Business Tool",
+      path: "/services/internal-business-tool",
+      desc: "Highly custom admin panels, database viewers, dynamic analytics dashboards, and workflows.",
+      icon: <BarChart3 size={16} className="text-[#0D3127]" />
+    },
+    {
+      name: "Subscription SaaS",
+      path: "/services/subscription-saas",
+      desc: "Comprehensive recurring billing platforms with tiered access controls and usage metrics.",
+      icon: <Repeat size={16} className="text-[#0D3127]" />
     }
   ];
 

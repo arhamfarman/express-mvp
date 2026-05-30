@@ -45,6 +45,18 @@ export default function App() {
     } else if (currentPath === '/services/branding-kit') {
       title = "Complete Branding Kit & Identity | Express MVP";
       desc = "Gain instant credibility and consumer trust with high-quality custom logos, premium business cards, letterheads, and style guides.";
+    } else if (currentPath === '/services/ai-saas-tool') {
+      title = "Custom AI SaaS Tool Development | Express MVP";
+      desc = "Build a high-performance AI SaaS tool featuring OpenAI integrations, secure user profiles, and recurring Stripe subscriptions.";
+    } else if (currentPath === '/services/marketplace-platform') {
+      title = "Two-Sided Marketplace Platform Development | Express MVP";
+      desc = "Launch a robust marketplace supporting listings, profiles, real-time messaging, and secure custom payment splits.";
+    } else if (currentPath === '/services/internal-business-tool') {
+      title = "Internal Business Tools & Analytics Dashboards | Express MVP";
+      desc = "Boost business efficiency with custom admin tools, interactive data visualizations, and automated workflow systems.";
+    } else if (currentPath === '/services/subscription-saas') {
+      title = "Subscription SaaS & Analytics Platform | Express MVP";
+      desc = "Deploy custom SaaS applications integrated with tiered Stripe recurring payments and usage tracking.";
     }
 
     document.title = title;
@@ -67,6 +79,14 @@ export default function App() {
         return <ServicePage serviceId="social-media-setup" onNavigate={handleNavigate} />;
       case '/services/branding-kit':
         return <ServicePage serviceId="branding-kit" onNavigate={handleNavigate} />;
+      case '/services/ai-saas-tool':
+        return <ServicePage serviceId="ai-saas-tool" onNavigate={handleNavigate} />;
+      case '/services/marketplace-platform':
+        return <ServicePage serviceId="marketplace-platform" onNavigate={handleNavigate} />;
+      case '/services/internal-business-tool':
+        return <ServicePage serviceId="internal-business-tool" onNavigate={handleNavigate} />;
+      case '/services/subscription-saas':
+        return <ServicePage serviceId="subscription-saas" onNavigate={handleNavigate} />;
       default:
         return (
           <>
