@@ -10,9 +10,11 @@ import { PricingSection } from './components/pricing-section';
 import { FAQSection } from './components/faq-section';
 import { CTASection } from './components/cta-section';
 import { Footer } from './components/footer';
+import { ServicePage } from './components/service-page';
 
 export default function App() {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
     const handleOpenCalendly = () => setIsCalendlyOpen(true);
@@ -20,18 +22,72 @@ export default function App() {
     return () => window.removeEventListener('openCalendly', handleOpenCalendly);
   }, []);
 
+  // Listen to popstate event (browser back/forward navigation)
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Sync route and SEO tags
+  useEffect(() => {
+    let title = "Express MVP - Build Fast, Validate Fast";
+    let desc = "Express MVP is a premier design and development partner building ultra-fast MVP websites, SaaS products, dashboards, and complete brand identity packages in record time.";
+
+    if (currentPath === '/services/website-development') {
+      title = "Website Development Services | Express MVP";
+      desc = "Get an ultra-fast, mobile-optimized, conversion-focused website or custom MVP dashboard built and launched in under 4 days.";
+    } else if (currentPath === '/services/social-media-setup') {
+      title = "Social Media Setup & Branding | Express MVP";
+      desc = "Kickstart your digital footprint with professional, unified profiles on Facebook, Instagram, LinkedIn, and Twitter.";
+    } else if (currentPath === '/services/branding-kit') {
+      title = "Complete Branding Kit & Identity | Express MVP";
+      desc = "Gain instant credibility and consumer trust with high-quality custom logos, premium business cards, letterheads, and style guides.";
+    }
+
+    document.title = title;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', desc);
+    }
+  }, [currentPath]);
+
+  const handleNavigate = (path: string) => {
+    window.history.pushState(null, '', path);
+    setCurrentPath(path);
+  };
+
+  const renderContent = () => {
+    switch (currentPath) {
+      case '/services/website-development':
+        return <ServicePage serviceId="website-development" onNavigate={handleNavigate} />;
+      case '/services/social-media-setup':
+        return <ServicePage serviceId="social-media-setup" onNavigate={handleNavigate} />;
+      case '/services/branding-kit':
+        return <ServicePage serviceId="branding-kit" onNavigate={handleNavigate} />;
+      default:
+        return (
+          <>
+            <HeroSection />
+            <BentoGridSection />
+            <WhatWeBuildSection />
+            <HowItWorksSection />
+            <ComparisonSection />
+            <PricingSection />
+            <FAQSection />
+            <CTASection />
+          </>
+        );
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background selection:bg-accent selection:text-accent-foreground">
-      <Navigation />
+      <Navigation currentPath={currentPath} onNavigate={handleNavigate} />
       <main>
-        <HeroSection />
-        <BentoGridSection />
-        <WhatWeBuildSection />
-        <HowItWorksSection />
-        <ComparisonSection />
-        <PricingSection />
-        <FAQSection />
-        <CTASection />
+        {renderContent()}
       </main>
       <Footer />
 
