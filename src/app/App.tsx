@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { PopupModal } from 'react-calendly';
 import { Navigation } from './components/navigation';
 import { HeroSection } from './components/hero-section';
 import { BentoGridSection } from './components/bento-grid-section';
@@ -36,27 +35,15 @@ export default function App() {
     let title = "Express MVP - Build Fast, Validate Fast";
     let desc = "Express MVP is a premier design and development partner building ultra-fast MVP websites, SaaS products, dashboards, and complete brand identity packages in record time.";
 
-    if (currentPath === '/services/website-development') {
-      title = "Website Development Services | Express MVP";
-      desc = "Get an ultra-fast, mobile-optimized, conversion-focused website or custom MVP dashboard built and launched in under 4 days.";
-    } else if (currentPath === '/services/social-media-setup') {
-      title = "Social Media Setup & Branding | Express MVP";
-      desc = "Kickstart your digital footprint with professional, unified profiles on Facebook, Instagram, LinkedIn, and Twitter.";
-    } else if (currentPath === '/services/branding-kit') {
-      title = "Complete Branding Kit & Identity | Express MVP";
-      desc = "Gain instant credibility and consumer trust with high-quality custom logos, premium business cards, letterheads, and style guides.";
-    } else if (currentPath === '/services/ai-saas-tool') {
-      title = "Custom AI SaaS Tool Development | Express MVP";
-      desc = "Build a high-performance AI SaaS tool featuring OpenAI integrations, secure user profiles, and recurring Stripe subscriptions.";
-    } else if (currentPath === '/services/marketplace-platform') {
-      title = "Two-Sided Marketplace Platform Development | Express MVP";
-      desc = "Launch a robust marketplace supporting listings, profiles, real-time messaging, and secure custom payment splits.";
-    } else if (currentPath === '/services/internal-business-tool') {
-      title = "Internal Business Tools & Analytics Dashboards | Express MVP";
-      desc = "Boost business efficiency with custom admin tools, interactive data visualizations, and automated workflow systems.";
-    } else if (currentPath === '/services/subscription-saas') {
-      title = "Subscription SaaS & Analytics Platform | Express MVP";
-      desc = "Deploy custom SaaS applications integrated with tiered Stripe recurring payments and usage tracking.";
+    if (currentPath === '/services/mvp-development') {
+      title = "MVP Development Services | Express MVP";
+      desc = "Build, launch, and validate your core product idea with a high-fidelity MVP in record time.";
+    } else if (currentPath === '/services/web-application-development') {
+      title = "Web Application Development | Express MVP";
+      desc = "Blazing fast, highly interactive custom web applications tailored to your business goals.";
+    } else if (currentPath === '/services/mobile-application') {
+      title = "Mobile Application Development | Express MVP";
+      desc = "Stunning iOS & Android native-feeling mobile apps designed and launched with flawless performance.";
     }
 
     document.title = title;
@@ -73,20 +60,12 @@ export default function App() {
 
   const renderContent = () => {
     switch (currentPath) {
-      case '/services/website-development':
-        return <ServicePage serviceId="website-development" onNavigate={handleNavigate} />;
-      case '/services/social-media-setup':
-        return <ServicePage serviceId="social-media-setup" onNavigate={handleNavigate} />;
-      case '/services/branding-kit':
-        return <ServicePage serviceId="branding-kit" onNavigate={handleNavigate} />;
-      case '/services/ai-saas-tool':
-        return <ServicePage serviceId="ai-saas-tool" onNavigate={handleNavigate} />;
-      case '/services/marketplace-platform':
-        return <ServicePage serviceId="marketplace-platform" onNavigate={handleNavigate} />;
-      case '/services/internal-business-tool':
-        return <ServicePage serviceId="internal-business-tool" onNavigate={handleNavigate} />;
-      case '/services/subscription-saas':
-        return <ServicePage serviceId="subscription-saas" onNavigate={handleNavigate} />;
+      case '/services/mvp-development':
+        return <ServicePage serviceId="mvp-development" onNavigate={handleNavigate} />;
+      case '/services/web-application-development':
+        return <ServicePage serviceId="web-application-development" onNavigate={handleNavigate} />;
+      case '/services/mobile-application':
+        return <ServicePage serviceId="mobile-application" onNavigate={handleNavigate} />;
       default:
         return (
           <>

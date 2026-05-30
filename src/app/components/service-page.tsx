@@ -23,11 +23,12 @@ import {
   BrainCircuit,
   ShoppingBag,
   BarChart3,
-  Repeat
+  Repeat,
+  Rocket
 } from 'lucide-react';
 
 interface ServicePageProps {
-  serviceId: 'website-development' | 'social-media-setup' | 'branding-kit' | 'ai-saas-tool' | 'marketplace-platform' | 'internal-business-tool' | 'subscription-saas';
+  serviceId: 'mvp-development' | 'web-application-development' | 'mobile-application' | 'ai-saas-tool' | 'marketplace-platform' | 'internal-business-tool' | 'subscription-saas';
   onNavigate: (path: string) => void;
 }
 
@@ -37,45 +38,45 @@ export function ServicePage({ serviceId, onNavigate }: ServicePageProps) {
   }, [serviceId]);
 
   const serviceData = {
-    'website-development': {
-      title: "Website Development",
-      slogan: "High-performance, modern websites that convert visitors into customers.",
-      description: "We build blazing fast, responsive, and search engine optimized websites designed specifically to validate your product and convert users. Delivered in under 4 days with pixel-perfect attention to detail.",
-      metaDescription: "Professional website development services. Get an ultra-fast, mobile-optimized, conversion-focused website in under 4 days.",
-      icon: <Laptop className="w-12 h-12 text-[#0D3127]" />,
+    'mvp-development': {
+      title: "MVP Development",
+      slogan: "Validate your ideas and launch to market in record time.",
+      description: "We build high-fidelity Minimum Viable Products (MVPs) designed specifically to get your product in front of real users fast. Delivered in record time with beautiful UI and production-ready code.",
+      metaDescription: "Professional MVP development services. Build and launch a high-fidelity MVP in record time to validate your market.",
+      icon: <Rocket className="w-12 h-12 text-[#0D3127]" />,
       accentBg: "bg-[#BCE953]/20",
       accentBorder: "border-[#BCE953]",
       features: [
         {
-          title: "Mobile-First Design",
-          desc: "Fully responsive layouts designed to look stunning and function flawlessly on smartphones, tablets, and desktops.",
-          icon: <Smartphone className="w-6 h-6 text-[#0D3127]" />
+          title: "Rapid Prototyping",
+          desc: "Fast, interactive mockups and designs that map user journeys and validate core mechanics before writing code.",
+          icon: <Sparkles className="w-6 h-6 text-[#0D3127]" />
         },
         {
-          title: "Blazing Fast Speeds",
-          desc: "Optimized asset delivery, clean code architectures, and modern caching strategies to achieve 95+ Google Lighthouse speed scores.",
-          icon: <Gauge className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "SEO Best Practices",
-          desc: "Built-in semantic HTML5 structures, dynamic meta schemas, fast loading times, and SEO-friendly structures to rank higher on Google.",
-          icon: <Search className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Conversion-Focused UX",
-          desc: "Clear call-to-actions, simple conversion funnels, and optimized layouts carefully mapped to convert traffic into leads.",
+          title: "Core Feature Focus",
+          desc: "Laser focus on your product's primary value proposition to deliver maximum utility to users without unnecessary bloat.",
           icon: <Target className="w-6 h-6 text-[#0D3127]" />
+        },
+        {
+          title: "Scalable Architecture",
+          desc: "Built with modern frameworks (React, Next.js, Vite) and clean coding paradigms to scale seamlessly as your userbase grows.",
+          icon: <Layers className="w-6 h-6 text-[#0D3127]" />
+        },
+        {
+          title: "User Feedback Loops",
+          desc: "Built-in analytics and feedback collectors to capture essential usage metrics and user insights immediately upon launch.",
+          icon: <Users className="w-6 h-6 text-[#0D3127]" />
         }
       ],
       process: [
-        { step: "01", title: "Strategy & Structure", desc: "We map out your pages, user flows, and conversion goals to form a rock-solid blueprint." },
-        { step: "02", title: "High-Fidelity UI Design", desc: "We create a custom premium interface matching your brand identity and style." },
-        { step: "03", title: "Speed Development", desc: "We write clean, lightweight, and modern code to ensure incredible performance." },
-        { step: "04", title: "Launch & SEO Setup", desc: "We optimize all tags, double-check speeds, connect analytics, and launch." }
+        { step: "01", title: "Scope & Strategy", desc: "We map out user flows, define core features, and design a rock-solid roadmap for the MVP." },
+        { step: "02", title: "High-Fidelity Design", desc: "We create a custom, modern, premium UI/UX design matching your brand's unique style." },
+        { step: "03", title: "Agile Development", desc: "We write clean, high-performance code, integrating authentications, databases, and APIs." },
+        { step: "04", title: "Launch & Validate", desc: "We run quality assurance testing, set up SEO tags, hook up analytics, and go live." }
       ],
       showcase: {
-        title: "Our Recent Projects",
-        subtitle: "A showcase of high-end custom web applications and MVPs we have built.",
+        title: "Our Recent MVPs",
+        subtitle: "A showcase of high-end custom MVPs and tools we have launched for founders.",
         projects: [
           {
             title: "AI SaaS Tool Dashboard",
@@ -94,7 +95,50 @@ export function ServicePage({ serviceId, onNavigate }: ServicePageProps) {
             description: "A fully responsive marketplace platform supporting dual user roles (buyers/sellers), detailed product listings, and custom split-payment gateways.",
             metrics: "Conversion Rate: +4.2% | Responsive: Yes",
             highlights: ["Product Listings", "Dual User Roles", "Payment Splits", "Realtime Chat"]
-          },
+          }
+        ]
+      }
+    },
+    'web-application-development': {
+      title: "Web Application Development",
+      slogan: "High-performance, feature-rich custom web apps tailored to your business goals.",
+      description: "From complex dashboards and customer portals to advanced custom databases, we design and build blazing fast web applications with pixel-perfect attention to detail and robust engineering.",
+      metaDescription: "Custom web application development services. Blazing fast, responsive, and secure custom web apps.",
+      icon: <Laptop className="w-12 h-12 text-[#0D3127]" />,
+      accentBg: "bg-[#BCE953]/20",
+      accentBorder: "border-[#BCE953]",
+      features: [
+        {
+          title: "Interactive Dashboards",
+          desc: "Stunning analytics workspaces, dynamic grids, custom usage trackers, and configuration settings.",
+          icon: <Laptop className="w-6 h-6 text-[#0D3127]" />
+        },
+        {
+          title: "API & Database Integration",
+          desc: "Flawless connections to external REST/GraphQL APIs and secure integrations with robust SQL/NoSQL databases.",
+          icon: <BrainCircuit className="w-6 h-6 text-[#0D3127]" />
+        },
+        {
+          title: "Enterprise Security",
+          desc: "Multi-tenant access control, secure authentication, API rate limiting, and encrypted data storage.",
+          icon: <ShieldCheck className="w-6 h-6 text-[#0D3127]" />
+        },
+        {
+          title: "SEO & Speed Optimized",
+          desc: "Modern caching, optimized asset loading, and server-side components to achieve 95+ Google Lighthouse speed scores.",
+          icon: <Gauge className="w-6 h-6 text-[#0D3127]" />
+        }
+      ],
+      process: [
+        { step: "01", title: "Architecture & Schema", desc: "We map backend structures, database schemas, and define API contracts." },
+        { step: "02", title: "Premium UI/UX Design", desc: "We craft interactive wireframes and a state-of-the-art visual style guide." },
+        { step: "03", title: "Robust Development", desc: "We develop the web app with highly optimized React code and secure data streams." },
+        { step: "04", title: "Performance Audits", desc: "We stress test API endpoints, optimize load speeds, secure variables, and deploy." }
+      ],
+      showcase: {
+        title: "Featured Custom Applications",
+        subtitle: "Highly custom enterprise tools and SaaS platforms engineered for flawless scale.",
+        projects: [
           {
             title: "Internal Business System",
             category: "Enterprise Tools",
@@ -116,121 +160,60 @@ export function ServicePage({ serviceId, onNavigate }: ServicePageProps) {
         ]
       }
     },
-    'social-media-setup': {
-      title: "Social Media Setup",
-      slogan: "Kickstart your digital presence with matching professional brand profiles.",
-      description: "Do not let poor visual presentation ruin your product launch. We build customized, fully integrated profiles across all major networks to ensure complete brand consistency and authority from day one.",
-      metaDescription: "Professional social media setup services. Create unified, branded, and optimized profiles on Facebook, Instagram, LinkedIn, and Twitter.",
-      icon: <Share2 className="w-12 h-12 text-[#0D3127]" />,
+    'mobile-application': {
+      title: "Mobile Application",
+      slogan: "Stunning iOS & Android apps that deliver flawless user experiences.",
+      description: "Expand your reach with high-performance native-feeling cross-platform mobile apps. From initial design concept to App Store deployment, we build responsive mobile applications with smooth micro-animations.",
+      metaDescription: "Professional mobile application development services. Get stunning iOS and Android apps with flawless performance.",
+      icon: <Smartphone className="w-12 h-12 text-[#0D3127]" />,
       accentBg: "bg-[#BCE953]/20",
       accentBorder: "border-[#BCE953]",
       features: [
         {
-          title: "Branded Header & Avatars",
-          desc: "Custom high-quality graphics tailored precisely to fit standard desktop and mobile frame sizes for all social networks.",
-          icon: <ImageIcon className="w-6 h-6 text-[#0D3127]" />
+          title: "Cross-Platform Power",
+          desc: "React Native or Flutter apps featuring a single optimized codebase for both iOS and Android to save time and budget.",
+          icon: <Layers className="w-6 h-6 text-[#0D3127]" />
         },
         {
-          title: "SEO Handle & Bio Optimization",
-          desc: "Keyword-rich descriptions and optimized bio content meticulously written to increase social profile discoverability.",
-          icon: <Search className="w-6 h-6 text-[#0D3127]" />
+          title: "Offline-First Support",
+          desc: "Keep users active even without internet with secure offline caching, local databases, and auto-syncing functions.",
+          icon: <ShieldCheck className="w-6 h-6 text-[#0D3127]" />
         },
         {
-          title: "Unified Branding Aesthetics",
-          desc: "Synchronized colors, logos, and taglines across Facebook, Instagram, LinkedIn, and Twitter for strong visual credibility.",
+          title: "Push Notifications",
+          desc: "Re-engage users instantly with beautifully formatted smart push notifications and in-app alert templates.",
           icon: <Sparkles className="w-6 h-6 text-[#0D3127]" />
         },
         {
-          title: "Launch Templates Bundle",
-          desc: "Receive pre-styled templates for your first 5 posts to announce your launch with style, matching your brand colors.",
-          icon: <Layers className="w-6 h-6 text-[#0D3127]" />
-        }
-      ],
-      process: [
-        { step: "01", title: "Target Audience Sync", desc: "We define which platforms fit your ideal buyer profile and research target keywords." },
-        { step: "02", title: "Graphic Asset Creation", desc: "We design custom avatars, premium banners, and high-impact custom templates." },
-        { step: "03", title: "Profile Build & SEO Copy", desc: "We fill out comprehensive bios, business details, handles, and custom tags." },
-        { step: "04", title: "Integrations & Handover", desc: "We link your platforms, set up tracking pixels, and deliver files." }
-      ],
-      showcase: {
-        title: "Complete Digital Presence Checklist",
-        subtitle: "What is included in our premium Social Media Setup package.",
-        platforms: [
-          {
-            name: "LinkedIn Business Profile",
-            badge: "Professional & B2B",
-            details: "Full setup of your business page with a professional header graphic, customized service listing, keyword-rich bio, and employee connection linking.",
-            focus: "Establishes authority and supports corporate sales / partnership outreach."
-          },
-          {
-            name: "Instagram & Facebook Pages",
-            badge: "Consumer & Visual",
-            details: "Highly engaging grid planning, highlights cover icons, custom Facebook action button link integration, and professional meta tags setup.",
-            focus: "Drives direct consumer interaction, social proof, and digital ads."
-          },
-          {
-            name: "Twitter / X Brand Profile",
-            badge: "Community & Tech",
-            details: "Unique custom header, keyword optimized bio, custom pinned launch post graphic design, and clean handle registration.",
-            focus: "Excellent for tech updates, live community interactions, and tech PR."
-          }
-        ]
-      }
-    },
-    'branding-kit': {
-      title: "Complete Branding Kit",
-      slogan: "Establish deep authority with a premium, cohesive visual brand identity.",
-      description: "Make your brand look established, credible, and premium from the very start. Our Complete Branding Kit includes high-fidelity assets designed to turn heads and lock in customer trust instantly.",
-      metaDescription: "Premium branding kit services. Get custom logo designs, professional business cards, modern letterheads, and corporate brand guidelines.",
-      icon: <Palette className="w-12 h-12 text-[#0D3127]" />,
-      accentBg: "bg-[#BCE953]/20",
-      accentBorder: "border-[#BCE953]",
-      features: [
-        {
-          title: "Custom Logo Design",
-          desc: "Unique custom concepts, dynamic alternates, high-resolution vector source files, and transparent formats for any backdrop.",
+          title: "App Store Publishing",
+          desc: "End-to-end management of App Store and Google Play console accounts, builds, screenshots, metadata, and reviews approval.",
           icon: <Award className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Premium Business Cards",
-          desc: "Stunning double-sided layouts with premium typography, customized layout styles, and print-ready output formats.",
-          icon: <Layers className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Corporate Letterhead & Stationery",
-          desc: "Polished Microsoft Word templates and editable PDF formats designed perfectly to carry your invoices and letters.",
-          icon: <FileText className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Stamps, Seals & Social Icons",
-          desc: "Circular vector stamp graphics, social media profile avatars, favicon packages, and digital signatures.",
-          icon: <Stamp className="w-6 h-6 text-[#0D3127]" />
         }
       ],
       process: [
-        { step: "01", title: "Brand Discovery", desc: "We align on your visual style preferences, core values, typography, and color palettes." },
-        { step: "02", title: "Concept Generation", desc: "We design three unique custom logo directions and present details for your choice." },
-        { step: "03", title: "Stationery Design", desc: "We craft matching double-sided business cards, letterheads, and stamps." },
-        { step: "04", title: "Style Guidelines Book", desc: "We deliver full vector packages, font links, and custom brand guidelines." }
+        { step: "01", title: "Mobile UX Mapping", desc: "We design native touch targets, swipe interactions, and screen transitions." },
+        { step: "02", title: "Stunning Visuals", desc: "We design a state-of-the-art mobile user interface featuring a gorgeous dark/light theme." },
+        { step: "03", title: "Cross-Platform Build", desc: "We build responsive screens, offline storages, native plugins, and push notifications." },
+        { step: "04", title: "Store Submission", desc: "We handle Apple & Google packaging, configure settings, upload, and launch." }
       ],
       showcase: {
-        title: "Included Branding Elements",
-        subtitle: "High-fidelity files and structures formatted perfectly for both print and web.",
+        title: "Included Mobile Features",
+        subtitle: "Every mobile application we build comes integrated with standard, modern core components.",
         elements: [
           {
-            title: "Custom Logo Architecture",
-            description: "Primary logo, alternate wordmark, clean submark favicon, and vector files (AI, SVG, PDF, PNG) optimized for screen and giant banners.",
+            title: "Universal Authentication",
+            description: "Seamless sign-ins using FaceID/TouchID, Google Login, Apple Sign-In, and standard secure magic links.",
+            icon: <ShieldCheck className="w-5 h-5 text-[#0D3127]" />
+          },
+          {
+            title: "Dynamic Notification Engine",
+            description: "Targeted push notifications, scheduled reminders, rich media support, and silent background data syncs.",
             icon: <Sparkles className="w-5 h-5 text-[#0D3127]" />
           },
           {
-            title: "Corporate Stationery Package",
-            description: "Double-sided premium business card design, matching letterhead (Word/PDF format), official envelope templates, and corporate stamp design.",
-            icon: <Mail className="w-5 h-5 text-[#0D3127]" />
-          },
-          {
-            title: "Brand Aesthetics Guidelines",
-            description: "A clean digital booklet outlining your exact color codes (HEX, RGB, CMYK), primary/secondary typography combinations, and spacing guidelines.",
-            icon: <FileText className="w-5 h-5 text-[#0D3127]" />
+            title: "Modern Core UX Kit",
+            description: "Polished UI micro-animations, adaptive layout themes (light/dark modes), fluid gestures, and instant response times.",
+            icon: <Laptop className="w-5 h-5 text-[#0D3127]" />
           }
         ]
       }
@@ -472,9 +455,9 @@ export function ServicePage({ serviceId, onNavigate }: ServicePageProps) {
   const data = serviceData[serviceId];
 
   // Resolve union typing for TypeScript compiler by narrowing shapes
-  const websiteShowcase = serviceId === 'website-development' ? (data.showcase as any) : null;
-  const socialShowcase = serviceId === 'social-media-setup' ? (data.showcase as any) : null;
-  const brandingShowcase = serviceId === 'branding-kit' ? (data.showcase as any) : null;
+  const websiteShowcase = (serviceId === 'mvp-development' || serviceId === 'web-application-development') ? (data.showcase as any) : null;
+  const socialShowcase = null;
+  const brandingShowcase = serviceId === 'mobile-application' ? (data.showcase as any) : null;
 
   return (
     <div className="pt-24 min-h-screen bg-background text-foreground">

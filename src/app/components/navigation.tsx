@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown, Laptop, Share2, Palette, BrainCircuit, ShoppingBag, BarChart3, Repeat } from 'lucide-react';
+import { Menu, X, ChevronDown, Laptop, Share2, Palette, BrainCircuit, ShoppingBag, BarChart3, Repeat, Rocket, Smartphone } from 'lucide-react';
 
 interface NavigationProps {
   currentPath: string;
@@ -59,22 +59,22 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
 
   const services = [
     {
-      name: "Website Development",
-      path: "/services/website-development",
-      desc: "Blazing fast, pixel-perfect, SEO optimized static & dynamic sites in under 4 days.",
+      name: "MVP Development",
+      path: "/services/mvp-development",
+      desc: "Build, launch, and validate your core product idea with a high-fidelity MVP in record time.",
+      icon: <Rocket size={16} className="text-[#0D3127]" />
+    },
+    {
+      name: "Web Application Development",
+      path: "/services/web-application-development",
+      desc: "Blazing fast, highly interactive custom web applications tailored to your business.",
       icon: <Laptop size={16} className="text-[#0D3127]" />
     },
     {
-      name: "Social Media Setup",
-      path: "/services/social-media-setup",
-      desc: "Complete branded profile setup on Facebook, Instagram, LinkedIn, and Twitter.",
-      icon: <Share2 size={16} className="text-[#0D3127]" />
-    },
-    {
-      name: "Complete Branding Kit",
-      path: "/services/branding-kit",
-      desc: "Stunning custom logo concepts, vector guidelines, letterheads, and stamps.",
-      icon: <Palette size={16} className="text-[#0D3127]" />
+      name: "Mobile Application",
+      path: "/services/mobile-application",
+      desc: "Stunning iOS and Android mobile apps with smooth animations and flawless performance.",
+      icon: <Smartphone size={16} className="text-[#0D3127]" />
     },
     {
       name: "AI SaaS Tool",
