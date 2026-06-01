@@ -42,8 +42,14 @@ export default function App() {
       title = "Web Application Development | Express MVP";
       desc = "Blazing fast, highly interactive custom web applications tailored to your business goals.";
     } else if (currentPath === '/services/mobile-application') {
-      title = "Mobile Application Development | Express MVP";
+      title = "Mobile Application | Express MVP";
       desc = "Stunning iOS & Android native-feeling mobile apps designed and launched with flawless performance.";
+    } else if (currentPath === '/services/branding-kit') {
+      title = "Complete Branding Kit & Identity | Express MVP";
+      desc = "Gain instant credibility and consumer trust with high-quality custom logos, premium styles, and guidelines.";
+    } else if (currentPath === '/services/graphics-design') {
+      title = "Graphics Design Services | Express MVP";
+      desc = "High-fidelity UI mockups, pitch decks, advertising graphics, and custom illustration assets.";
     }
 
     document.title = title;
@@ -66,6 +72,10 @@ export default function App() {
         return <ServicePage serviceId="web-application-development" onNavigate={handleNavigate} />;
       case '/services/mobile-application':
         return <ServicePage serviceId="mobile-application" onNavigate={handleNavigate} />;
+      case '/services/branding-kit':
+        return <ServicePage serviceId="branding-kit" onNavigate={handleNavigate} />;
+      case '/services/graphics-design':
+        return <ServicePage serviceId="graphics-design" onNavigate={handleNavigate} />;
       default:
         return (
           <>

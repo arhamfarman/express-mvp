@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown, Laptop, Share2, Palette, BrainCircuit, ShoppingBag, BarChart3, Repeat, Rocket, Smartphone } from 'lucide-react';
+import { Menu, X, ChevronDown, Laptop, Share2, Palette, BrainCircuit, ShoppingBag, BarChart3, Repeat, Rocket, Smartphone, PenTool } from 'lucide-react';
 
 interface NavigationProps {
   currentPath: string;
@@ -77,28 +77,16 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
       icon: <Smartphone size={16} className="text-[#0D3127]" />
     },
     {
-      name: "AI SaaS Tool",
-      path: "/services/ai-saas-tool",
-      desc: "Custom landing page & app with OpenAI APIs, user profiles, authentication, and billing.",
-      icon: <BrainCircuit size={16} className="text-[#0D3127]" />
+      name: "Complete Branding Kit",
+      path: "/services/branding-kit",
+      desc: "Gain instant credibility and consumer trust with high-quality custom logos, premium styles, and guidelines.",
+      icon: <Palette size={16} className="text-[#0D3127]" />
     },
     {
-      name: "Marketplace Platform",
-      path: "/services/marketplace-platform",
-      desc: "Two-sided listings platform with user profiles, reviews, messaging, and Stripe split payouts.",
-      icon: <ShoppingBag size={16} className="text-[#0D3127]" />
-    },
-    {
-      name: "Internal Business Tool",
-      path: "/services/internal-business-tool",
-      desc: "Highly custom admin panels, database viewers, dynamic analytics dashboards, and workflows.",
-      icon: <BarChart3 size={16} className="text-[#0D3127]" />
-    },
-    {
-      name: "Subscription SaaS",
-      path: "/services/subscription-saas",
-      desc: "Comprehensive recurring billing platforms with tiered access controls and usage metrics.",
-      icon: <Repeat size={16} className="text-[#0D3127]" />
+      name: "Graphics Design",
+      path: "/services/graphics-design",
+      desc: "High-fidelity UI mockups, pitch decks, advertising graphics, and custom illustration assets.",
+      icon: <PenTool size={16} className="text-[#0D3127]" />
     }
   ];
 

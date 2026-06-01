@@ -24,11 +24,12 @@ import {
   ShoppingBag,
   BarChart3,
   Repeat,
-  Rocket
+  Rocket,
+  PenTool
 } from 'lucide-react';
 
 interface ServicePageProps {
-  serviceId: 'mvp-development' | 'web-application-development' | 'mobile-application' | 'ai-saas-tool' | 'marketplace-platform' | 'internal-business-tool' | 'subscription-saas';
+  serviceId: 'mvp-development' | 'web-application-development' | 'mobile-application' | 'branding-kit' | 'graphics-design';
   onNavigate: (path: string) => void;
 }
 
@@ -218,234 +219,118 @@ export function ServicePage({ serviceId, onNavigate }: ServicePageProps) {
         ]
       }
     },
-    'ai-saas-tool': {
-      title: "AI SaaS Tool",
-      slogan: "Launch your custom AI product with advanced features and subscription billing.",
-      description: "We design and build complete, production-ready AI SaaS tools featuring custom landing pages, secure user profiles, secure authentications, OpenAI API integrations, and robust Stripe payment structures in record time.",
-      metaDescription: "Build a custom AI SaaS tool with OpenAI integrations, user accounts, and Stripe recurring billing.",
-      icon: <BrainCircuit className="w-12 h-12 text-[#0D3127]" />,
+    'branding-kit': {
+      title: "Complete Branding Kit",
+      slogan: "Establish deep authority with a premium, cohesive visual brand identity.",
+      description: "Make your brand look established, credible, and premium from the very start. Our Complete Branding Kit includes high-fidelity assets designed to turn heads and lock in customer trust instantly.",
+      metaDescription: "Premium branding kit services. Get custom logo designs, professional business cards, modern letterheads, and corporate brand guidelines.",
+      icon: <Palette className="w-12 h-12 text-[#0D3127]" />,
       accentBg: "bg-[#BCE953]/20",
       accentBorder: "border-[#BCE953]",
       features: [
         {
-          title: "OpenAI Integrations",
-          desc: "Connect your models, design custom prompts, handle rate limits, and provide lightning-fast streaming text responses.",
-          icon: <BrainCircuit className="w-6 h-6 text-[#0D3127]" />
+          title: "Custom Logo Design",
+          desc: "Unique custom concepts, dynamic alternates, high-resolution vector source files, and transparent formats for any backdrop.",
+          icon: <Award className="w-6 h-6 text-[#0D3127]" />
         },
         {
-          title: "User Accounts & Profiles",
-          desc: "Secure email signup/login, social authentications (Google, GitHub), profiles, and usage guardrails.",
-          icon: <Users className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Stripe Subscriptions",
-          desc: "Manage subscription tiers, secure checkout sessions, coupon codes, and clean invoicing systems.",
+          title: "Premium Business Cards",
+          desc: "Stunning double-sided layouts with premium typography, customized layout styles, and print-ready output formats.",
           icon: <Layers className="w-6 h-6 text-[#0D3127]" />
         },
         {
-          title: "Interactive Dashboards",
-          desc: "Beautiful user workspaces, interactive grids, custom usage trackers, and settings configurations.",
-          icon: <Laptop className="w-6 h-6 text-[#0D3127]" />
+          title: "Corporate Letterhead & Stationery",
+          desc: "Polished Microsoft Word templates and editable PDF formats designed perfectly to carry your invoices and letters.",
+          icon: <FileText className="w-6 h-6 text-[#0D3127]" />
+        },
+        {
+          title: "Stamps, Seals & Social Icons",
+          desc: "Circular vector stamp graphics, social media profile avatars, favicon packages, and digital signatures.",
+          icon: <Stamp className="w-6 h-6 text-[#0D3127]" />
         }
       ],
       process: [
-        { step: "01", title: "API Planning & Prompting", desc: "We define prompt schemas, model selections, and rate limit rules." },
-        { step: "02", title: "User Flows & Layout", desc: "We design highly engaging workspaces, login states, and pricing grids." },
-        { step: "03", title: "Integration & Development", desc: "We write clean, high-performance API connectors and billing systems." },
-        { step: "04", title: "Launch & Validation", desc: "We double check all tokens/keys, complete test transactions, and deploy." }
+        { step: "01", title: "Brand Discovery", desc: "We align on your visual style preferences, core values, typography, and color palettes." },
+        { step: "02", title: "Concept Generation", desc: "We design three unique custom logo directions and present details for your choice." },
+        { step: "03", title: "Stationery Design", desc: "We craft matching double-sided business cards, letterheads, and stamps." },
+        { step: "04", title: "Style Guidelines Book", desc: "We deliver full vector packages, font links, and custom brand guidelines." }
       ],
       showcase: {
-        title: "Essential AI SaaS Integrations",
-        subtitle: "What we embed to make your product scale.",
+        title: "Included Branding Elements",
+        subtitle: "High-fidelity files and structures formatted perfectly for both print and web.",
         elements: [
           {
-            title: "Custom LLM Core",
-            description: "OpenAI GPT-4/Claude models, custom prompt engineering, streaming responses, and reliable rate limiting structures.",
+            title: "Custom Logo Architecture",
+            description: "Primary logo, alternate wordmark, clean submark favicon, and vector files (AI, SVG, PDF, PNG) optimized for screen and giant banners.",
             icon: <Sparkles className="w-5 h-5 text-[#0D3127]" />
           },
           {
-            title: "Security & User Hub",
-            description: "Secure login, dynamic profiles, multi-tenancy access controls, and custom usage meters.",
-            icon: <ShieldCheck className="w-5 h-5 text-[#0D3127]" />
+            title: "Corporate Stationery Package",
+            description: "Double-sided premium business card design, matching letterhead (Word/PDF format), official envelope templates, and corporate stamp design.",
+            icon: <Mail className="w-5 h-5 text-[#0D3127]" />
           },
           {
-            title: "Stripe Billing & Portal",
-            description: "Metered subscription billing, multiple tiers control, and self-serve client billing history dashboards.",
+            title: "Brand Aesthetics Guidelines",
+            description: "A clean digital booklet outlining your exact color codes (HEX, RGB, CMYK), primary/secondary typography combinations, and spacing guidelines.",
             icon: <FileText className="w-5 h-5 text-[#0D3127]" />
           }
         ]
       }
     },
-    'marketplace-platform': {
-      title: "Marketplace Platform",
-      slogan: "A fully integrated, double-sided platform built to connect buyers and sellers.",
-      description: "Launch your next two-sided marketplace in record time. We build beautiful user dashboards, product listing pages, messaging centers, review systems, and secure Stripe payment split integrations.",
-      metaDescription: "Develop a double-sided marketplace platform supporting listings, user profiles, messaging, and Stripe payment splits.",
-      icon: <ShoppingBag className="w-12 h-12 text-[#0D3127]" />,
+    'graphics-design': {
+      title: "Graphics Design",
+      slogan: "State-of-the-art custom graphic elements designed to captivate your audience.",
+      description: "Engage your customers with high-end, high-converting digital and print visuals. We design professional marketing banners, presentation decks, UI components, and tailored illustration assets.",
+      metaDescription: "Professional graphics design services. Get high-converting UI mockups, pitch decks, and custom marketing graphics.",
+      icon: <PenTool className="w-12 h-12 text-[#0D3127]" />,
       accentBg: "bg-[#BCE953]/20",
       accentBorder: "border-[#BCE953]",
       features: [
         {
-          title: "Interactive Listings Showcase",
-          desc: "Advanced search filters, custom categories, photo upload galleries, and location sorting systems.",
-          icon: <Layers className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Dual Account Controls",
-          desc: "Completely separate custom dashboards and workflows tailored to buyers and sellers.",
-          icon: <Users className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Stripe Split Payments",
-          desc: "Secure checkout systems, automated direct commission split rules, and direct vendor payouts.",
-          icon: <Mail className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Real-Time User Messaging",
-          desc: "Built-in communication systems to connect buyers and sellers directly and securely on platform.",
-          icon: <Share2 className="w-6 h-6 text-[#0D3127]" />
-        }
-      ],
-      process: [
-        { step: "01", title: "Marketplace Wireframes", desc: "We structure the core user directories, vendor portals, and listing details." },
-        { step: "02", title: "Interactive Prototypes", desc: "We design listing cards, search views, and dual-profile settings dashboards." },
-        { step: "03", title: "Stripe Gateway Code", desc: "We deploy Stripe Connect splits to distribute platform cuts automatically." },
-        { step: "04", title: "Quality Assurance & Launch", desc: "We execute full buyer-to-seller mock orders, test messaging, and launch." }
-      ],
-      showcase: {
-        title: "Stunning Marketplace Features",
-        subtitle: "Engineered for maximum buyer and vendor engagement.",
-        elements: [
-          {
-            title: "Listings Showroom",
-            description: "Sophisticated filters, photo grids, instant keyboard-driven search, and map integration support.",
-            icon: <Sparkles className="w-5 h-5 text-[#0D3127]" />
-          },
-          {
-            title: "Dynamic Vendor Portals",
-            description: "Seller dashboards showing sales history, ratings, reviews, stock level controls, and profile editing.",
-            icon: <Laptop className="w-5 h-5 text-[#0D3127]" />
-          },
-          {
-            title: "Stripe Connect Engine",
-            description: "Robust automated split payouts, tax configurations, global currency handlers, and checkout overlays.",
-            icon: <ShieldCheck className="w-5 h-5 text-[#0D3127]" />
-          }
-        ]
-      }
-    },
-    'internal-business-tool': {
-      title: "Internal Business Tool",
-      slogan: "Streamline operations with custom admin tools and live analytics dashboards.",
-      description: "Increase your team's operational speed and eliminate manual processes. We build high-performance custom admin systems, custom data entry layouts, dynamic interactive charts, and deep external API integrations.",
-      metaDescription: "Design custom internal business tools, admin panels, interactive charts, and API integrations.",
-      icon: <BarChart3 className="w-12 h-12 text-[#0D3127]" />,
-      accentBg: "bg-[#BCE953]/20",
-      accentBorder: "border-[#BCE953]",
-      features: [
-        {
-          title: "Workflow Automations",
-          desc: "Eliminate manual data entries, spreadsheets, and emails with centralized web interfaces.",
-          icon: <Layers className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Dynamic Chart Visualizations",
-          desc: "Interactive graphs, reports, export tools (CSV, PDF), and automated summaries.",
+          title: "UI & App Mockups",
+          desc: "High-fidelity app and website mockup designs with stunning layouts and micro-interactions ready for developers.",
           icon: <Laptop className="w-6 h-6 text-[#0D3127]" />
         },
         {
-          title: "Secure Database Connections",
-          desc: "Integrate cleanly with PostgreSQL, Supabase, Firebase, Google Sheets, or custom backend APIs.",
-          icon: <ShieldCheck className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Granular Access Control",
-          desc: "Ensure managers, support agents, and staff members only view data permitted by their roles.",
-          icon: <Users className="w-6 h-6 text-[#0D3127]" />
-        }
-      ],
-      process: [
-        { step: "01", title: "Workflow Mapping", desc: "We trace your team's current Excel/email chains and map optimized dashboards." },
-        { step: "02", title: "UI Mockups", desc: "We design information layouts, filtering controls, tables, and charting blocks." },
-        { step: "03", title: "Integration Build", desc: "We connect active databases, set up secure authentications, and run scripts." },
-        { step: "04", title: "Role Deployment", desc: "We verify user permissions profiles, complete stress tests, and launch." }
-      ],
-      showcase: {
-        title: "Operational Infrastructure",
-        subtitle: "Custom tools configured to double your team's throughput.",
-        elements: [
-          {
-            title: "Workflows Automation",
-            description: "No-Excel layouts, automatic custom notifications, bulk imports, and daily email summaries.",
-            icon: <Sparkles className="w-5 h-5 text-[#0D3127]" />
-          },
-          {
-            title: "Interactive Analytics Suite",
-            description: "Responsive charts (Recharts), calendar ranges, dynamic table filters, and PDF report builders.",
-            icon: <Laptop className="w-5 h-5 text-[#0D3127]" />
-          },
-          {
-            title: "External API Links",
-            description: "Direct real-time connections to sync data with Salesforce, HubSpot, Stripe, or Slack automatically.",
-            icon: <Share2 className="w-5 h-5 text-[#0D3127]" />
-          }
-        ]
-      }
-    },
-    'subscription-saas': {
-      title: "Subscription SaaS",
-      slogan: "Build, launch, and monetize your software product with tiered pricing plans.",
-      description: "A high-fidelity subscription platform built with clean react architectures, secure authentication, Stripe billing integrations, dynamic customer portals, and real-time usage metrics trackers.",
-      metaDescription: "Launch a custom subscription SaaS with tiered plans, usage metrics, and Stripe billing portals.",
-      icon: <Repeat className="w-12 h-12 text-[#0D3127]" />,
-      accentBg: "bg-[#BCE953]/20",
-      accentBorder: "border-[#BCE953]",
-      features: [
-        {
-          title: "Tiered Pricing Engine",
-          desc: "Easily configure Free, Pro, and Enterprise modules, with secure access-guarded middleware rules.",
+          title: "Presentation & Pitch Decks",
+          desc: "Expertly structured slide designs crafted to tell your startup's story, secure funding, and close enterprise sales.",
           icon: <Layers className="w-6 h-6 text-[#0D3127]" />
         },
         {
-          title: "Dynamic Customer Hub",
-          desc: "Allow clients to self-serve update subscriptions, download past invoices, and edit card details.",
-          icon: <Users className="w-6 h-6 text-[#0D3127]" />
+          title: "Social & Ad Creatives",
+          desc: "High-converting social graphics and advertising banners tailored specifically for performance marketing campaigns.",
+          icon: <Sparkles className="w-6 h-6 text-[#0D3127]" />
         },
         {
-          title: "Usage Metrics & Limits",
-          desc: "Connect usage limit trackers, configure metered billing plans, and set up warnings overlays.",
-          icon: <Laptop className="w-6 h-6 text-[#0D3127]" />
-        },
-        {
-          title: "Revenue analytics Dashboards",
-          desc: "Beautiful graphic metrics layouts showing active users growth, signups, and transaction listings.",
-          icon: <ShieldCheck className="w-6 h-6 text-[#0D3127]" />
+          title: "Custom Illustrations & Icons",
+          desc: "Bespoke vector illustrations and unique custom iconography sets to elevate your digital product's aesthetics.",
+          icon: <Target className="w-6 h-6 text-[#0D3127]" />
         }
       ],
       process: [
-        { step: "01", title: "Architecture & Rules", desc: "We map user levels, metered parameters, and access permissions logic." },
-        { step: "02", title: "Landing page & Signup", desc: "We design pricing grids, login fields, and dynamic user workspace flows." },
-        { step: "03", title: "Stripe Webhooks Build", desc: "We write secure webhooks scripts to handle instant subscription statuses." },
-        { step: "04", title: "Launch & Analytics Sync", desc: "We test transactions in sandbox mode, verify hooks speed, and launch." }
+        { step: "01", title: "Visual Brief & Moodboard", desc: "We outline the target goals, layout reference aesthetics, and build custom inspiration moodboards." },
+        { step: "02", title: "Draft Concepts", desc: "We design multiple custom creative layout directions to establish the project's visual voice." },
+        { step: "03", title: "Aesthetic Refinement", desc: "We meticulously polish the selected direction, fine-tuning typography, alignments, and assets." },
+        { step: "04", title: "Production-Ready Export", desc: "We deliver organized layers source files (Figma, AI) and fully optimized high-res assets." }
       ],
       showcase: {
-        title: "SaaS Infrastructure Suite",
-        subtitle: "Built to support and grow your monthly recurring revenue (MRR).",
+        title: "Featured Design Masterpieces",
+        subtitle: "A showcase of high-end startup presentation decks and custom digital illustration assets.",
         elements: [
           {
-            title: "Tiered Pricing controls",
-            description: "Free, Pro, and Custom Enterprise models complete with payment buttons and gated features.",
-            icon: <Sparkles className="w-5 h-5 text-[#0D3127]" />
-          },
-          {
-            title: "Dynamic Customer Billing Hub",
-            description: "Self-serve cards updates, download PDF invoices, change plans, and cancel controls.",
+            title: "Interactive Presentation Decks",
+            description: "Winning slide structures, custom charts, premium graphics, and fully editable pitch presentations.",
             icon: <FileText className="w-5 h-5 text-[#0D3127]" />
           },
           {
-            title: "Usage Metering Tools",
-            description: "Real-time query checkers, automated user email notices, and server resources warning boards.",
-            icon: <ShieldCheck className="w-5 h-5 text-[#0D3127]" />
+            title: "Premium Social & Ad Creative Sets",
+            description: "Conversion-optimized marketing banner kits designed precisely for Facebook, Instagram, and LinkedIn ads.",
+            icon: <ImageIcon className="w-5 h-5 text-[#0D3127]" />
+          },
+          {
+            title: "Custom Brand Illustrations",
+            description: "Signature custom product illustrations, detailed vector infographics, and unique website asset packages.",
+            icon: <Sparkles className="w-5 h-5 text-[#0D3127]" />
           }
         ]
       }
@@ -457,7 +342,7 @@ export function ServicePage({ serviceId, onNavigate }: ServicePageProps) {
   // Resolve union typing for TypeScript compiler by narrowing shapes
   const websiteShowcase = (serviceId === 'mvp-development' || serviceId === 'web-application-development') ? (data.showcase as any) : null;
   const socialShowcase = null;
-  const brandingShowcase = serviceId === 'mobile-application' ? (data.showcase as any) : null;
+  const brandingShowcase = (serviceId === 'mobile-application' || serviceId === 'branding-kit' || serviceId === 'graphics-design') ? (data.showcase as any) : null;
 
   return (
     <div className="pt-24 min-h-screen bg-background text-foreground">

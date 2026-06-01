@@ -54,7 +54,7 @@ export function Footer() {
           </div>
 
           <div className="text-sm text-muted-foreground/60">
-            © {currentYear} Express MVP Agency
+            © {currentYear} Express MVP
           </div>
         </motion.div>
       </div>

@@ -44,13 +44,19 @@ export function PricingSection() {
                 <h3 className="text-[24px] font-bold text-primary-foreground mb-4 tracking-[-0.01em]">
                   MVP Sprint
                 </h3>
-                <div className="flex items-baseline justify-center gap-2 mb-2">
+                <div className="flex flex-col items-center justify-center mb-2">
+                  <span className="text-white/60 text-sm font-medium uppercase tracking-wider mb-1">
+                    Starting at
+                  </span>
                   <span className="text-[48px] font-bold text-accent tracking-tight hover:scale-105 transition-transform duration-250">
                     $2,399
                   </span>
                 </div>
-                <p className="text-primary-foreground/80 text-sm font-medium">
+                <p className="text-primary-foreground/80 text-sm font-medium mb-3">
                   50% upfront • 50% on delivery
+                </p>
+                <p className="text-white/40 text-xs leading-relaxed max-w-[280px] mx-auto">
+                  Most founders launch between $2,399–$4,999 depending on scope.
                 </p>
               </div>
 
