@@ -228,12 +228,16 @@ export function BentoGridSection() {
                         className="md:col-span-6 group relative bg-white border border-[#0D3127]/10 rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-all duration-300 hover:shadow-md p-8 flex items-center justify-center text-center"
                     >
                         <div>
+                            <div className="text-[11px] font-semibold text-foreground/40 tracking-[0.12em] uppercase mb-2">Starting at</div>
                             <div className="text-[48px] md:text-[64px] font-bold text-[#0D3127] tracking-tight leading-none mb-2">
                                 $2,399
                             </div>
-                            <div className="text-[18px] font-medium text-foreground/70">
-                                Fixed price MVP sprint
+                            <div className="text-[26px] md:text-[32px] font-extrabold text-[#0D3127]/80 tracking-tight leading-tight mb-3">
+                                MVP Sprint
                             </div>
+                            <p className="text-[12px] text-foreground/40 leading-[1.5] max-w-[220px] mx-auto">
+                                Most founders launch between $2,399–$4,999 depending on scope.
+                            </p>
                         </div>
                     </motion.div>
 

@@ -39,11 +39,15 @@ export function MetricsSection() {
               <div className="w-12 h-12 bg-[#BCE953] rounded-full flex items-center justify-center mb-6">
                 <DollarSign className="text-[#0D3127] group-hover:rotate-3 transition-transform duration-250" size={24} />
               </div>
+              <div className="text-[11px] font-semibold text-muted-foreground/50 tracking-[0.12em] uppercase mb-1">Starting at</div>
               <div className="text-[24px] md:text-[26px] font-bold text-card-foreground mb-3 tracking-[-0.02em]">
                 $2,399 Fixed Price
               </div>
-              <p className="text-muted-foreground leading-[1.6]">
+              <p className="text-muted-foreground leading-[1.6] mb-3">
                 Fixed scope. Fixed timeline. No hourly billing.
+              </p>
+              <p className="text-[12px] text-muted-foreground/50 leading-[1.5]">
+                Most founders launch between $2,399–$4,999 depending on scope.
               </p>
             </div>
           </motion.div>
