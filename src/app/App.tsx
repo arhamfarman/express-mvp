@@ -10,6 +10,8 @@ import { FAQSection } from './components/faq-section';
 import { CTASection } from './components/cta-section';
 import { Footer } from './components/footer';
 import { ServicePage } from './components/service-page';
+import { PartnerSection } from './components/partner-section';
+import { WebsiteDevelopmentPage } from './components/website-development-page';
 
 export default function App() {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
@@ -50,6 +52,9 @@ export default function App() {
     } else if (currentPath === '/services/graphics-design') {
       title = "Graphics Design Services | Express MVP";
       desc = "High-fidelity UI mockups, pitch decks, advertising graphics, and custom illustration assets.";
+    } else if (currentPath === '/website-development') {
+      title = "Website Development | Express MVP";
+      desc = "Modern websites built to convert visitors into customers. Premium custom designs engineered for speed, conversions, and flawless performance.";
     }
 
     document.title = title;
@@ -76,6 +81,8 @@ export default function App() {
         return <ServicePage serviceId="branding-kit" onNavigate={handleNavigate} />;
       case '/services/graphics-design':
         return <ServicePage serviceId="graphics-design" onNavigate={handleNavigate} />;
+      case '/website-development':
+        return <WebsiteDevelopmentPage onNavigate={handleNavigate} />;
       default:
         return (
           <>
@@ -85,6 +92,7 @@ export default function App() {
             <HowItWorksSection />
             <ComparisonSection />
             <PricingSection />
+            <PartnerSection />
             <FAQSection />
             <CTASection />
           </>

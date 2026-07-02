@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown, Laptop, Share2, Palette, BrainCircuit, ShoppingBag, BarChart3, Repeat, Rocket, Smartphone, PenTool } from 'lucide-react';
+import { Menu, X, ChevronDown, Laptop, Share2, Palette, BrainCircuit, ShoppingBag, BarChart3, Repeat, Rocket, Smartphone, PenTool, Layers } from 'lucide-react';
 
 interface NavigationProps {
   currentPath: string;
@@ -60,33 +60,24 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
   const services = [
     {
       name: "MVP Development",
-      path: "/services/mvp-development",
+      path: "/#pricing",
       desc: "Build, launch, and validate your core product idea with a high-fidelity MVP in record time.",
-      icon: <Rocket size={16} className="text-[#0D3127]" />
+      icon: <Rocket size={16} className="text-[#0D3127]" />,
+      action: () => scrollToSection('pricing')
     },
     {
-      name: "Web Application Development",
-      path: "/services/web-application-development",
-      desc: "Blazing fast, highly interactive custom web applications tailored to your business.",
-      icon: <Laptop size={16} className="text-[#0D3127]" />
+      name: "Technical Fractional Retainer",
+      path: "/#partnership",
+      desc: "Ongoing full-stack engineering support, feature development, backend systems, DevOps, and technical guidance.",
+      icon: <Layers size={16} className="text-[#0D3127]" />,
+      action: () => scrollToSection('partnership')
     },
     {
-      name: "Mobile Application",
-      path: "/services/mobile-application",
-      desc: "Stunning iOS and Android mobile apps with smooth animations and flawless performance.",
-      icon: <Smartphone size={16} className="text-[#0D3127]" />
-    },
-    {
-      name: "Complete Branding Kit",
-      path: "/services/branding-kit",
-      desc: "Gain instant credibility and consumer trust with high-quality custom logos, premium styles, and guidelines.",
-      icon: <Palette size={16} className="text-[#0D3127]" />
-    },
-    {
-      name: "Graphics Design",
-      path: "/services/graphics-design",
-      desc: "High-fidelity UI mockups, pitch decks, advertising graphics, and custom illustration assets.",
-      icon: <PenTool size={16} className="text-[#0D3127]" />
+      name: "Website Development",
+      path: "/website-development",
+      desc: "Modern websites designed and built to convert visitors into customers with high-end aesthetic appeal.",
+      icon: <Laptop size={16} className="text-[#0D3127]" />,
+      action: () => handleServiceClick('/website-development')
     }
   ];
 
@@ -139,8 +130,13 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
                     {services.map((svc) => (
                       <button
                         key={svc.path}
-                        onClick={() => handleServiceClick(svc.path)}
-                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#EEF2EC] text-left transition-all duration-150 group"
+                        onClick={() => {
+                          setIsDropdownOpen(false);
+                          setIsMobileDropdownOpen(false);
+                          setIsMobileMenuOpen(false);
+                          svc.action();
+                        }}
+                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#EEF2EC] text-left transition-all duration-150 group cursor-pointer"
                       >
                         <div className="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
                           {svc.icon}
@@ -210,8 +206,13 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
                     {services.map((svc) => (
                       <button
                         key={svc.path}
-                        onClick={() => handleServiceClick(svc.path)}
-                        className="py-2 text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
+                        onClick={() => {
+                          setIsDropdownOpen(false);
+                          setIsMobileDropdownOpen(false);
+                          setIsMobileMenuOpen(false);
+                          svc.action();
+                        }}
+                        className="py-2 text-left text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                       >
                         {svc.name}
                       </button>
